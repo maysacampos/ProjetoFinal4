@@ -1,0 +1,12 @@
+4 - Teste Web
+Utilize o site https://www.giulianaflores.com.br/
+
+4.1 - Crie um script simples que realize a consulta de um produto no site até chegar a etapa do carrinho de compras. 
+Valide o nome e o preço do produto em cada uma das telas para garantir que se mantenha o mesmo.
+
+4.2 - Organize esse mesmo script organizado com um arquivo de features e outro de passos. 
+Realize o teste com 2 produtos cujos dados devem estar preenchidos na feature.
+
+4.3 - Organize esse mesmo script em Page Objects e execute localmente
+
+
