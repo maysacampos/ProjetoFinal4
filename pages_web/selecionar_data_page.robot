@@ -2,27 +2,20 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${name_flor}    xpath=//span[@id='ContentSite_lblProductDsName']
-${price_flor}    css=div.container_full:nth-child(13) main.content-site:nth-child(4) div:nth-child(9) div.prod:nth-child(1) div.prod_col2 div.preco_prod:nth-child(7) > span.precoPor_prod:nth-child(3)
-${txt_cep}    id=ContentSite_txtZip
-${btn_ok_cep}    css=.jOpenShippingPopup
-${btn_data}    css=.selectDate
-${btn_confirma_data}    id=btConfirmShippingData
-${btn_add_cart}    id=ContentSite_lbtBuy
+${imagem_produto}    css=img[src='//static.giulianaflores.com.br/images/product/13527gg.jpg?ims=300x300']
+${nome_produto}    xpath=//h3[@class='title-item' and text()='Buquê Fascínio de Rosas Colombianas Vermelhas']
+${preco_produto}    xpath=//span[@class='actual-price' and text()='R$ 202,93']
+
 
 *** Keywords ***
-Preencher campo CEP
-    [Arguments]    ${cep}                  
-    Input Text    ${txt_cep}    ${cep}
+#Clicar na Imagem do Produto
+#    [Documentation]    Clica na imagem do produto para selecioná-lo.
+#    Click Element    ${imagem_produto}
 
-Clicar botao OK
-    Click Element    ${btn_ok_cep}   
+Verificar Nome do Produto
+    [Documentation]    Verifica se o preço do produto está correto.
+    Element Text Should Be    ${nome_produto}    Buquê Fascínio de Rosas Colombianas Vermelhas
 
-Escolher data de entrega
-    Click Element    ${btn_data}
-
-Confirmar Data de Entrega 
-    Click Element   ${btn_confirma_data}   
-
-Adicionar produto ao carrinho
-    Click Element    ${btn_add_cart}     
+Verificar Preço do Produto
+    [Documentation]    Verifica se o preço do produto está correto.
+    Element Text Should Be    ${preco_produto}    R$ 202,93

@@ -2,8 +2,33 @@
 Library    SeleniumLibrary
 
 *** Variables ***
-${item_product_name}    xpath=//h3[contains(text(),'União das Belas Orquideas Brancas e Lilás')]
-${item_product_price}    css=div.container_full:nth-child(11) main.content-site:nth-child(8) main.main:nth-child(3) section.product-container:nth-child(2) div.product-container-left main.slider.content-left div.carousel-position-left.banner-product.owl-carousel.owl-theme div.owl-wrapper-outer div.owl-wrapper div.owl-item:nth-child(1) div.product-item a.list-carousel div.price > span.actual-price
+${imagem_produto}    img[alt="Imagem de Buquê Fascínio de Rosas Colombianas Vermelhas"]
+${btn_add_to_cart}    xpath=//a[@id='ContentSite_lbtBuy' and contains(text(), 'Adicionar ao carrinho')]
+${name_produto}    id=ContentSite_lblProductDsName
+${price_produto}    css=div.container_full:nth-child(13) main.content-site:nth-child(4) div:nth-child(9) div.prod:nth-child(1) div.prod_col2 div.preco_prod:nth-child(7) > span.precoPor_prod:nth-child(3)
+${txt_cep}    id=ContentSite_txtZip
+${btn_ok_cep}    css=.jOpenShippingPopup
+${btn_data}    css=.selectDate
+${btn_confirma_data}    id=btConfirmShippingData
+${horario_comercial}    xpath=//input[@name='periodRadio' and @vlprice='41,79']
+
+
 *** Keywords ***
-Selecionar Produto na Home
-    Click Element    ${item_product_name}
+Clicar na Imagem do Produto
+    Click Element    ${imagem_produto}
+
+Adicionar produto ao carrinho
+    Click Button    ${btn_add_to_cart}
+
+Preencher campo CEP
+    [Arguments]    ${cep}                  
+    Input Text    ${txt_cep}    ${cep}
+
+Clicar botao OK
+    Click Element    ${btn_ok_cep}   
+
+Escolher data de entrega
+    Click Element    ${btn_data}
+
+Confirmar Data de Entrega 
+    Click Element   ${btn_confirma_data}   
