@@ -10,3 +10,10 @@ Realize o teste com 2 produtos cujos dados devem estar preenchidos na feature.
 4.3 - Organize esse mesmo script em Page Objects e execute localmente
 
 
+    #Element Text Should Be    ${inventory_item_product_name}    Buquê Fascínio de Rosas Colombianas Vermelhas    
+    #Element Text Should Be    ${inventory_item_product_price}     R$ 202,93 
+
+        #Element Text Should Be    ${cart_product_quantity}    
+    #Element Text Should Be    ${titulo_secao}
+
+    

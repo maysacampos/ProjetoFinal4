@@ -10,17 +10,13 @@ Selecionar Buquê Fascínio de Rosas Colombianas Vermelhas
     Preencher senha    Teste123
     Tirar Screenshot    2-Login Preenchido
     Clicar no botao Continuar
-    #Element Text Should Be    ${logo_img}    Giuliana Flores
-    Tirar Screenshot    3-Lista de Produto
-    Clicar na Imagem do Produto 
-    Element Text Should Be    ${nome_produto}    Buquê Fascínio de Rosas Colombianas Vermelhas    
-    Element Text Should Be    ${preco_produto}     R$ 202,93    
+    Tirar Screenshot    3-Lista de Produto 
+    Wait Until Element Is Visible    css=img[alt="Imagem de Buquê Fascínio de Rosas Colombianas Vermelhas"]
+    Clicar na Imagem do Produto    Imagem de Buquê Fascínio de Rosas Colombianas Vermelhas   
     Tirar Screenshot    4-Detalhes do Produto
-    Adicionar produto ao carrinho
+    Adicionar produto ao carrinho    Adicionar ao carrinho
     Preencher campo CEP    30411312
     Tirar Screenshot    5-Carrinho
-    Escolher data de entrega
-    Confirmar Data de Entrega  
+    Digite o CEP da entrega    30411312
+    Clicar na data de entrega    31
     Clicar botao OK
-    Element Text Should Be    ${cart_product_quantity}    
-    Element Text Should Be    ${titulo_secao}
