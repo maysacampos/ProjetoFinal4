@@ -17,3 +17,21 @@ Realize o teste com 2 produtos cujos dados devem estar preenchidos na feature.
     #Element Text Should Be    ${titulo_secao}
 
     
+    #[Arguments]    ${data}
+    #${seletor_data}    Set Variable    //a[@class='selectDate' and @date='${data}' and text()='31']
+    #Wait Until Element Is Visible    xpath=${seletor_data}    timeout=20
+    #Capture Page Screenshot    screenshot_before_click.png
+    #Click Element    xpath=${seletor_data}
+
+
+    Clicar na data de entrega
+    [Documentation]    
+    Click Element    ${data_entrega}    
+
+
+        Clicar na data de entrega 
+
+        Clicar botao OK
+    Click Element    css=.confirm-button   
+
+       Clicar botao OK

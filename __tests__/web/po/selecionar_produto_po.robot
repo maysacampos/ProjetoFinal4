@@ -18,5 +18,4 @@ Selecionar Buquê Fascínio de Rosas Colombianas Vermelhas
     Preencher campo CEP    30411312
     Tirar Screenshot    5-Carrinho
     Digite o CEP da entrega    30411312
-    Clicar na data de entrega    31
-    Clicar botao OK
+ 
